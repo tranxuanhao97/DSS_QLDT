@@ -38,3 +38,15 @@ C:\Users\doanm\OneDrive\Documents\Visual Studio 2008\Projects\DSS_QLDT-master\QL
 C:\Users\doanm\OneDrive\Documents\Visual Studio 2008\Projects\DSS_QLDT-master\QLDT\obj\Debug\QLDT.SHOW_FORM.resources
 C:\Users\doanm\OneDrive\Documents\Visual Studio 2008\Projects\DSS_QLDT-master\QLDT\obj\Debug\QLDT.Properties.Resources.resources
 C:\Users\doanm\OneDrive\Documents\Visual Studio 2008\Projects\DSS_QLDT-master\QLDT\obj\Debug\QLDT.csproj.GenerateResource.Cache
+C:\Users\doanm\OneDrive\Documents\Visual Studio 2008\Projects\DSS_QLDT-master\QLDT\obj\Debug\QLDT.STATISTIC_FORM.resources
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.exe
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.pdb
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\bin\Debug\QLDT.exe
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\bin\Debug\QLDT.pdb
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\ResolveAssemblyReference.cache
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.ASK_FORM.resources
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.QLDT_MAIN.resources
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.SHOW_FORM.resources
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.Properties.Resources.resources
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.STATISTIC_FORM.resources
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.csproj.GenerateResource.Cache

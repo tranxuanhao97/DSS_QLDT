@@ -12,21 +12,20 @@ namespace QLDT
 {
     public partial class SHOW_FORM : Form
     {
-        public SHOW_FORM(string query)
+        public SHOW_FORM(DataTable dt)
         {
             InitializeComponent();
-            ShowResult(query);
+            ShowResult(dt);
         }
 
-        private void ShowResult(string query)
+        private void ShowResult(DataTable dt)
         {
-            SqlConnection conn = new SqlConnection("Data Source=TUANDOAN-PC\\SQLEXPRESS;Initial Catalog=QLDT_V1;Integrated Security=True");
-            DataTable dt = new DataTable();
-            //string query = "Select * From [QLDT].[dbo].[cosodaotao]";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, conn);
-            //DialogResult result = MessageBox.Show(query, "Print");
-            SDA.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dataGridShowForm.DataSource = dt;
+
+            dataGridShowForm.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
+            dataGridShowForm.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridShowForm.ColumnHeadersDefaultCellStyle.Font = new Font("SansSerif", 10F, FontStyle.Bold);
+            dataGridShowForm.EnableHeadersVisualStyles = false;
         }
     }
 }

@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;  
-
+using System.Data.SqlClient;
 
 namespace QLDT
 {
@@ -17,9 +15,12 @@ namespace QLDT
         string query;
         bool advanceClicked = false;
         bool cbbLoaded = false;
+
+        Controller controller;
         public ASK_FORM()
         {
             InitializeComponent();
+            controller = new Controller();
             Init();
         }
 
@@ -55,7 +56,7 @@ namespace QLDT
         {
             var list = new List<String>();
             list.Add("None");
-            //SqlConnection conn = DBUtil
+            SqlConnection conn = DBConnection.GetDBConnection();
             conn.Open();
             string sql = "SELECT * FROM [QLDT_V1].[dbo].[cosodaotao]";
             using (var command = new SqlCommand(sql, conn))
@@ -163,29 +164,25 @@ namespace QLDT
                 }
             }
             //MessageBox.Show(query);
-            new SHOW_FORM(query).Show();
+            controller.PushDataToShowForm(query);
         }
-
         private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Các trường đào tạo CNTT ?
             query = "Select MaTruong as 'Mã Trường', TenTruong as 'Tên Trường', Website  From [QLDT_V1].[dbo].[cosodaotao] ";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
 
         private void llblQ2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             query = "Select TenTruong as 'Tên Trường', DiaChi as 'Địa Chỉ' From [QLDT_V1].[dbo].[cosodaotao] ";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
 
         private void llblQ3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             query = "Select TenTruong, Website From [QLDT_V1].[dbo].[cosodaotao] ";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
 
         private void pnlAdvance_Paint(object sender, PaintEventArgs e)
@@ -209,39 +206,36 @@ namespace QLDT
         private void llblQ4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             query = "Select *  From [QLDT_V1].[dbo].[chuyennganhdaotao] ";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
 
         private void llblQ5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             query = "Select DISTINCT DVChuquan  From [QLDT_V1].[dbo].[cosodaotao] ";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
 
         private void llblQ6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //So Co so dao tao CNTT tai HN
             query = "SELECT COUNT(DISTINCT MaTruong)  FROM [QLDT_V1].[dbo].[cosodaotao] WHERE TinhThanh LIKE N'%Hà Nội%'";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            //SHOW_FORM sf = new SHOW_FORM(query);
+            controller.PushDataToShowForm(query);
+            //sf.Show();
         }
 
         private void llblQ7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Chi tieu tuyen sinh cac truong
             query = "SELECT [QLDT_V1].[dbo].[cosodaotao].[TenTruong] as 'Trường' ,SUM([QLDT_V1].[dbo].[cosonganh].[ChiTieu]) as 'Tổng Chỉ Tiêu' FROM [QLDT_V1].[dbo].[cosonganh],[QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[cosonganh].[MaTruong]=[QLDT_V1].[dbo].[cosodaotao].[MaTruong] GROUP BY [QLDT_V1].[dbo].[cosodaotao].[TenTruong]";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
 
         private void llblQ8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //So luong csdt cac tinh thanh
             query = "SELECT TinhThanh, COUNT(*) FROM [QLDT_V1].[dbo].[cosodaotao] GROUP BY TinhThanh";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            controller.PushDataToShowForm(query);
         }
     }
     public class ComboboxItem

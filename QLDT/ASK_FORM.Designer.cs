@@ -30,10 +30,8 @@
         {
             this.llblQ2 = new System.Windows.Forms.LinkLabel();
             this.gbQuestion = new System.Windows.Forms.GroupBox();
-            this.llblQ8 = new System.Windows.Forms.LinkLabel();
             this.llblQ7 = new System.Windows.Forms.LinkLabel();
             this.llblQ5 = new System.Windows.Forms.LinkLabel();
-            this.llblQ6 = new System.Windows.Forms.LinkLabel();
             this.llblQ4 = new System.Windows.Forms.LinkLabel();
             this.llblQ3 = new System.Windows.Forms.LinkLabel();
             this.llblQ1 = new System.Windows.Forms.LinkLabel();
@@ -49,6 +47,7 @@
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.gbSearch = new System.Windows.Forms.GroupBox();
             this.cbbTieuChi = new System.Windows.Forms.ComboBox();
+            this.llblQ8 = new System.Windows.Forms.LinkLabel();
             this.gbQuestion.SuspendLayout();
             this.pnlAdvance.SuspendLayout();
             this.gbSearch.SuspendLayout();
@@ -73,7 +72,6 @@
             this.gbQuestion.Controls.Add(this.llblQ8);
             this.gbQuestion.Controls.Add(this.llblQ7);
             this.gbQuestion.Controls.Add(this.llblQ5);
-            this.gbQuestion.Controls.Add(this.llblQ6);
             this.gbQuestion.Controls.Add(this.llblQ4);
             this.gbQuestion.Controls.Add(this.llblQ3);
             this.gbQuestion.Controls.Add(this.llblQ1);
@@ -85,18 +83,6 @@
             this.gbQuestion.TabIndex = 1;
             this.gbQuestion.TabStop = false;
             this.gbQuestion.Text = "GỢI Ý";
-            // 
-            // llblQ8
-            // 
-            this.llblQ8.AutoSize = true;
-            this.llblQ8.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ8.Location = new System.Drawing.Point(299, 129);
-            this.llblQ8.Name = "llblQ8";
-            this.llblQ8.Size = new System.Drawing.Size(198, 13);
-            this.llblQ8.TabIndex = 7;
-            this.llblQ8.TabStop = true;
-            this.llblQ8.Text = "Số lượng cơ sở đào tạo các tỉnh thành ?";
-            this.llblQ8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ8_LinkClicked);
             // 
             // llblQ7
             // 
@@ -122,28 +108,16 @@
             this.llblQ5.Text = "Danh sách các đơn vị chủ quản ?";
             this.llblQ5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ5_LinkClicked);
             // 
-            // llblQ6
-            // 
-            this.llblQ6.AutoSize = true;
-            this.llblQ6.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ6.Location = new System.Drawing.Point(299, 61);
-            this.llblQ6.Name = "llblQ6";
-            this.llblQ6.Size = new System.Drawing.Size(180, 13);
-            this.llblQ6.TabIndex = 4;
-            this.llblQ6.TabStop = true;
-            this.llblQ6.Text = "Số cơ sở đào tạo CNTT tại Hà Nội ?";
-            this.llblQ6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ6_LinkClicked);
-            // 
             // llblQ4
             // 
             this.llblQ4.AutoSize = true;
             this.llblQ4.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.llblQ4.Location = new System.Drawing.Point(27, 129);
             this.llblQ4.Name = "llblQ4";
-            this.llblQ4.Size = new System.Drawing.Size(178, 13);
+            this.llblQ4.Size = new System.Drawing.Size(364, 13);
             this.llblQ4.TabIndex = 3;
             this.llblQ4.TabStop = true;
-            this.llblQ4.Text = "Các chuyên ngành đào tạo CNTT ?";
+            this.llblQ4.Text = "Danh mục giáo dục, đào tạo cấp IV trình độ đại học chuyên ngành CNTT?";
             this.llblQ4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ4_LinkClicked);
             // 
             // llblQ3
@@ -307,6 +281,17 @@
             this.cbbTieuChi.Size = new System.Drawing.Size(131, 21);
             this.cbbTieuChi.TabIndex = 9;
             // 
+            // llblQ8
+            // 
+            this.llblQ8.AutoSize = true;
+            this.llblQ8.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ8.Location = new System.Drawing.Point(299, 61);
+            this.llblQ8.Name = "llblQ8";
+            this.llblQ8.Size = new System.Drawing.Size(198, 13);
+            this.llblQ8.TabIndex = 8;
+            this.llblQ8.TabStop = true;
+            this.llblQ8.Text = "Số lượng cơ sở đào tạo các tỉnh thành ?";
+            // 
             // ASK_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,11 +334,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbDVChuQuan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel llblQ8;
         private System.Windows.Forms.LinkLabel llblQ7;
         private System.Windows.Forms.LinkLabel llblQ5;
-        private System.Windows.Forms.LinkLabel llblQ6;
         private System.Windows.Forms.LinkLabel llblQ4;
         private System.Windows.Forms.ComboBox cbbTieuChi;
+        private System.Windows.Forms.LinkLabel llblQ8;
     }
 }

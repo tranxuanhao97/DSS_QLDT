@@ -28,35 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridShowForm = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridShowForm)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridShowForm
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(668, 360);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridShowForm.AllowUserToDeleteRows = false;
+            this.dataGridShowForm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridShowForm.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridShowForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridShowForm.Location = new System.Drawing.Point(-1, 0);
+            this.dataGridShowForm.Name = "dataGridShowForm";
+            this.dataGridShowForm.Size = new System.Drawing.Size(1283, 582);
+            this.dataGridShowForm.TabIndex = 0;
             // 
             // SHOW_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 432);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1280, 580);
+            this.Controls.Add(this.dataGridShowForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SHOW_FORM";
             this.Text = "SHOW_FORM";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridShowForm)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridShowForm;
     }
 }

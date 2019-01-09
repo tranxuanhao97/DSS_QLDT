@@ -35,6 +35,9 @@
             // dataGridShowForm
             // 
             this.dataGridShowForm.AllowUserToDeleteRows = false;
+            this.dataGridShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridShowForm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridShowForm.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridShowForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -51,7 +54,6 @@
             this.ClientSize = new System.Drawing.Size(1263, 550);
             this.Controls.Add(this.dataGridShowForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "SHOW_FORM";
             this.Text = "SHOW_FORM";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridShowForm)).EndInit();

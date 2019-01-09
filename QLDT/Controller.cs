@@ -34,7 +34,6 @@ namespace QLDT
             dt.Columns["STT"].AutoIncrement = true;
             dt.Columns["STT"].AutoIncrementSeed = 1;
             dt.Columns["STT"].AutoIncrementStep = 1;
-            
             SDA.Fill(dt);
             return dt;
         }

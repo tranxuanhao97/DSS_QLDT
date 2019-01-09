@@ -14,3 +14,6 @@ Thay button search bằng icon
 3. Số cơ sở đào tạo CNTT tại Hà Nội/Tp HCM?
 4. Chỉ tiêu tuyển sinh tất cả các trường
 5. Số lượng cơ sở đào tạo các tỉnh thành 
+
+1.Tạo pagination 
+2.Sửa lại chố search nhấn enter thì tìm, ko có từ khóa thì thôi

@@ -111,6 +111,15 @@ namespace QLDT
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //if (advanceClicked == false && searchTextBox.Text == "") {
+            //    MessageBox.Show("Mời nhập từ khóa để tìm kiếm");
+            //    return;
+            //}
+            //if (advanceClicked == true && cbbTinhThanh.SelectedItem.ToString() == "None" && cbbDVChuQuan.SelectedItem.ToString() == "None" && searchTextBox.Text == "")
+            //{
+            //    MessageBox.Show("Mời nhập từ khóa hoặc chọn tiêu chí để tìm kiếm");
+            //    return;
+            //}
             int criteria_index = cbbTieuChi.SelectedIndex;
             String criteria_field ="";
             int numberSearch = -1;
@@ -140,12 +149,12 @@ namespace QLDT
             if (!advanceClicked)
             {
                 if (numberSearch == 1)
-                    query = "Select * From [QLDT_V1].[dbo].[cosodaotao] WHERE " + criteria_field + " LIKE N'%" + input + "%'";
+                    query = "Select [MaTruong] 'Mã Trường' ,[TenTruong] 'Tên Trường' ,[DiaChi] 'Địa Chỉ' ,[Website] ,[TinhThanh] 'Tỉnh Thành' ,[DVChuquan] 'Đơn Vị Chủ Quản' From [QLDT_V1].[dbo].[cosodaotao] WHERE " + criteria_field + " LIKE N'%" + input + "%'";
                 else if (numberSearch == 0)
                 {
-                    query = "Select chuyennganhdaotao.MaNganh, chuyennganhdaotao.TenChuyenNganh, cosonganh.ChiTieu, cosonganh.DiemChuan From [QLDT_V1].[dbo].[chuyennganhdaotao] LEFT JOIN [QLDT_V1].[dbo].[cosonganh] ON [QLDT_V1].[dbo].[cosonganh].[MaNganh] = [QLDT_V1].[dbo].[chuyennganhdaotao].[MaNganh] " + "WHERE [QLDT_V1].[dbo].[chuyennganhdaotao].[" + criteria_field + "] LIKE N'%" + input + "%'";
+                    query = "Select chuyennganhdaotao.MaNganh 'Mã Ngành', chuyennganhdaotao.TenChuyenNganh 'Tên Chuyên Ngành', cosonganh.ChiTieu 'Chỉ Tiêu', cosonganh.DiemChuan 'Điểm chuẩn' From [QLDT_V1].[dbo].[chuyennganhdaotao] LEFT JOIN [QLDT_V1].[dbo].[cosonganh] ON [QLDT_V1].[dbo].[cosonganh].[MaNganh] = [QLDT_V1].[dbo].[chuyennganhdaotao].[MaNganh] " + "WHERE [QLDT_V1].[dbo].[chuyennganhdaotao].[" + criteria_field + "] LIKE N'%" + input + "%'";
                 }
-                MessageBox.Show(query);
+                //MessageBox.Show(query);
             }
             else
             {
@@ -157,15 +166,23 @@ namespace QLDT
                     cbbTextTinhThanh = "";
                 if (numberSearch == 1)
                 {
-                    query = "Select * From [QLDT_V1].[dbo].[cosodaotao] WHERE " + criteria_field + " LIKE N'%" + input + "%' AND TinhThanh LIKE N'%" + cbbTextTinhThanh + "%' AND DVChuQuan LIKE N'%" + cbbTextDVChuQuan + "%';";
+                    query = "Select [MaTruong] 'Mã Trường' ,[TenTruong] 'Tên Trường' ,[DiaChi] 'Địa Chỉ' ,[Website] ,[TinhThanh] 'Tỉnh Thành' ,[DVChuquan] 'Đơn Vị Chủ Quản' From [QLDT_V1].[dbo].[cosodaotao] WHERE " + criteria_field + " LIKE N'%" + input + "%' AND TinhThanh LIKE N'%" + cbbTextTinhThanh + "%' AND DVChuQuan LIKE N'%" + cbbTextDVChuQuan + "%';";
                 }
                 else if (numberSearch == 0) {
-                    query = "SELECT [QLDT_V1].[dbo].[cosodaotao].[TenTruong] as 'Trường' ,[QLDT_V1].[dbo].[chuyennganhdaotao].[TenChuyenNganh] as 'Tên Chuyên Ngành', [QLDT_V1].[dbo].[cosonganh].[MaNganh] as 'Mã Ngành' FROM [QLDT_V1].[dbo].[cosonganh],[QLDT_V1].[dbo].[cosodaotao], [QLDT_V1].[dbo].[chuyennganhdaotao] WHERE [QLDT_V1].[dbo].[cosonganh].[MaTruong]=[QLDT_V1].[dbo].[cosodaotao].[MaTruong] AND [QLDT_V1].[dbo].[cosonganh].[MaNganh]=[QLDT_V1].[dbo].[chuyennganhdaotao].[MaNganh] AND [QLDT_V1].[dbo].[chuyennganhdaotao].[" + criteria_field + "] LIKE N'%" + input + "%'AND TinhThanh LIKE N'%" + cbbTextTinhThanh + "%' AND DVChuQuan LIKE N'%" + cbbTextDVChuQuan + "%';";
+                    query = "SELECT [QLDT_V1].[dbo].[cosodaotao].[TenTruong] as 'Tên Trường' ,[QLDT_V1].[dbo].[chuyennganhdaotao].[TenChuyenNganh] as 'Tên Chuyên Ngành', [QLDT_V1].[dbo].[cosonganh].[MaNganh] as 'Mã Ngành' FROM [QLDT_V1].[dbo].[cosonganh],[QLDT_V1].[dbo].[cosodaotao], [QLDT_V1].[dbo].[chuyennganhdaotao] WHERE [QLDT_V1].[dbo].[cosonganh].[MaTruong]=[QLDT_V1].[dbo].[cosodaotao].[MaTruong] AND [QLDT_V1].[dbo].[cosonganh].[MaNganh]=[QLDT_V1].[dbo].[chuyennganhdaotao].[MaNganh] AND [QLDT_V1].[dbo].[chuyennganhdaotao].[" + criteria_field + "] LIKE N'%" + input + "%'AND TinhThanh LIKE N'%" + cbbTextTinhThanh + "%' AND DVChuQuan LIKE N'%" + cbbTextDVChuQuan + "%';";
                 }
             }
             //MessageBox.Show(query);
             controller.PushDataToShowForm(query);
         }
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick();
+            }
+        }
+
         private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Các trường đào tạo CNTT ?
@@ -175,50 +192,38 @@ namespace QLDT
 
         private void llblQ2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Địa Chỉ các trường đào tạo CNTT ?
             query = "Select TenTruong as 'Tên Trường', DiaChi as 'Địa Chỉ' From [QLDT_V1].[dbo].[cosodaotao] ";
             controller.PushDataToShowForm(query);
         }
 
         private void llblQ3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            query = "Select TenTruong, Website From [QLDT_V1].[dbo].[cosodaotao] ";
+            //Website các trường đào tạo CNTT ?
+            query = "Select TenTruong as 'Tên Trường', Website From [QLDT_V1].[dbo].[cosodaotao] ";
             controller.PushDataToShowForm(query);
         }
 
-        private void pnlAdvance_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void cbbTinhThanh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnSearch.PerformClick();  
-            }
-        }
-
+        
         private void llblQ4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            query = "Select *  From [QLDT_V1].[dbo].[chuyennganhdaotao] ";
+            //Danh mục giáo dục, đào tạo cấp IV trình độ đại học chuyên ngành CNTT?
+            query = "Select MaNganh as 'Mã Ngành', TenChuyenNganh as 'Tên Chuyên Ngành'  From [QLDT_V1].[dbo].[chuyennganhdaotao] ";
             controller.PushDataToShowForm(query);
         }
 
         private void llblQ5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            query = "Select DISTINCT DVChuquan  From [QLDT_V1].[dbo].[cosodaotao] ";
+            //Danh sách các đơn vị chủ quản ?
+            query = "Select DISTINCT DVChuquan as 'Đơn vị chủ quản'  From [QLDT_V1].[dbo].[cosodaotao] ";
             controller.PushDataToShowForm(query);
         }
 
         private void llblQ6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //So Co so dao tao CNTT tai HN
-            query = "SELECT COUNT(DISTINCT MaTruong)  FROM [QLDT_V1].[dbo].[cosodaotao] WHERE TinhThanh LIKE N'%Hà Nội%'";
+            //Số Cơ sở đào tạo CNTT tại Hà Nội?
+            query = "SELECT [MaTruong] 'Mã Trường' ,[TenTruong] 'Tên Trường' ,[DiaChi] 'Địa Chỉ' ,[Website] ,[DVChuquan] 'Đơn Vị Chủ Quản' FROM [QLDT_V1].[dbo].[cosodaotao] WHERE TinhThanh=N'Hà Nội'";
             //SHOW_FORM sf = new SHOW_FORM(query);
             controller.PushDataToShowForm(query);
             //sf.Show();
@@ -234,7 +239,35 @@ namespace QLDT
         private void llblQ8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //So luong csdt cac tinh thanh
-            query = "SELECT TinhThanh, COUNT(*) FROM [QLDT_V1].[dbo].[cosodaotao] GROUP BY TinhThanh";
+            query = "SELECT TinhThanh as 'Tỉnh Thành', COUNT(*) as 'Số lượng CSDT' FROM [QLDT_V1].[dbo].[cosodaotao] GROUP BY TinhThanh";
+            controller.PushDataToShowForm(query);
+        }
+
+        private void llblQ9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Số lượng cơ sở đào tạo theo đơn vị chủ quản ?
+            query = "SELECT [QLDT_V1].[dbo].[cosodaotao].DVChuquan as 'Đơn Vị Chủ Quản',COUNT(*) as 'Số trường' FROM [QLDT_V1].[dbo].[cosodaotao] group by [QLDT_V1].[dbo].[cosodaotao].DVChuquan";
+            controller.PushDataToShowForm(query);
+        }
+
+        private void llblQ10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //10. Các cơ sở đào tạo CNTT tại Thành phố Hồ Chí Minh ?
+            query = "SELECT [MaTruong] 'Mã Trường' ,[TenTruong] 'Tên Trường' ,[DiaChi] 'Địa Chỉ' ,[Website] ,[DVChuquan] 'Đơn Vị Chủ Quản' FROM [QLDT_V1].[dbo].[cosodaotao] WHERE TinhThanh=N'TP. Hồ Chí Minh'";
+            controller.PushDataToShowForm(query);
+        }
+
+        private void llblQ11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //11. Điểm chuẩn theo từng chuyên ngành tại các trường ?
+            query = "SELECT [QLDT_V1].[dbo].[cosodaotao].[TenTruong] as 'Tên Trường' ,[QLDT_V1].[dbo].[chuyennganhdaotao].[MaNganh] as 'Mã Ngành' ,[QLDT_V1].[dbo].[chuyennganhdaotao].[TenChuyenNganh] as 'Tên Chuyên Ngành' ,[QLDT_V1].[dbo].[cosonganh].[DiemChuan] 'Điểm Chuẩn' FROM [QLDT_V1].[dbo].[chuyennganhdaotao],[QLDT_V1].[dbo].[cosonganh],[QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[chuyennganhdaotao].MaNganh=[QLDT_V1].[dbo].[cosonganh].MaNganh AND [QLDT_V1].[dbo].[cosonganh].[MaTruong]=[QLDT_V1].[dbo].[cosodaotao].[MaTruong]";
+            controller.PushDataToShowForm(query);
+        }
+
+        private void llblQ12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //12. Tên các trường có chuyên ngành có chỉ tiêu không it hơn 100 chỉ tiêu ?
+            query = "SELECT [cosodaotao].[TenTruong] as 'Tên Trường' ,[chuyennganhdaotao].[TenChuyenNganh] as 'Tên Chuyên Ngành' ,[cosonganh].[DiemChuan] as 'Điểm Chuẩn' ,[ChiTieu] as 'Chỉ Tiêu' FROM [QLDT_V1].[dbo].[cosonganh] INNER JOIN [QLDT_V1].[dbo].[chuyennganhdaotao] ON [cosonganh].MaNganh=[chuyennganhdaotao].MaNganh INNER JOIN [QLDT_V1].[dbo].[cosodaotao] ON [cosonganh].MaTruong=[cosodaotao].MaTruong WHERE [ChiTieu] >= 100";
             controller.PushDataToShowForm(query);
         }
     }

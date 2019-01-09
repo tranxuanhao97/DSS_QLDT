@@ -30,6 +30,12 @@
         {
             this.llblQ2 = new System.Windows.Forms.LinkLabel();
             this.gbQuestion = new System.Windows.Forms.GroupBox();
+            this.llblQ12 = new System.Windows.Forms.LinkLabel();
+            this.llblQ10 = new System.Windows.Forms.LinkLabel();
+            this.llblQ11 = new System.Windows.Forms.LinkLabel();
+            this.llblQ9 = new System.Windows.Forms.LinkLabel();
+            this.llblQ6 = new System.Windows.Forms.LinkLabel();
+            this.llblQ8 = new System.Windows.Forms.LinkLabel();
             this.llblQ7 = new System.Windows.Forms.LinkLabel();
             this.llblQ5 = new System.Windows.Forms.LinkLabel();
             this.llblQ4 = new System.Windows.Forms.LinkLabel();
@@ -47,7 +53,6 @@
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.gbSearch = new System.Windows.Forms.GroupBox();
             this.cbbTieuChi = new System.Windows.Forms.ComboBox();
-            this.llblQ8 = new System.Windows.Forms.LinkLabel();
             this.gbQuestion.SuspendLayout();
             this.pnlAdvance.SuspendLayout();
             this.gbSearch.SuspendLayout();
@@ -56,19 +61,25 @@
             // llblQ2
             // 
             this.llblQ2.AutoSize = true;
+            this.llblQ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblQ2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ2.Location = new System.Drawing.Point(27, 61);
+            this.llblQ2.Location = new System.Drawing.Point(64, 70);
             this.llblQ2.Name = "llblQ2";
-            this.llblQ2.Size = new System.Drawing.Size(176, 13);
+            this.llblQ2.Size = new System.Drawing.Size(244, 15);
             this.llblQ2.TabIndex = 0;
             this.llblQ2.TabStop = true;
-            this.llblQ2.Text = "Địa Chỉ các trường đào tạo CNTT ?";
+            this.llblQ2.Text = "2. Địa Chỉ các trường đào tạo CNTT ?";
             this.llblQ2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ2_LinkClicked);
             // 
             // gbQuestion
             // 
             this.gbQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbQuestion.Controls.Add(this.llblQ12);
+            this.gbQuestion.Controls.Add(this.llblQ10);
+            this.gbQuestion.Controls.Add(this.llblQ11);
+            this.gbQuestion.Controls.Add(this.llblQ9);
+            this.gbQuestion.Controls.Add(this.llblQ6);
             this.gbQuestion.Controls.Add(this.llblQ8);
             this.gbQuestion.Controls.Add(this.llblQ7);
             this.gbQuestion.Controls.Add(this.llblQ5);
@@ -77,79 +88,159 @@
             this.gbQuestion.Controls.Add(this.llblQ1);
             this.gbQuestion.Controls.Add(this.llblQ2);
             this.gbQuestion.Enabled = false;
-            this.gbQuestion.Location = new System.Drawing.Point(52, 34);
+            this.gbQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbQuestion.Location = new System.Drawing.Point(70, 39);
             this.gbQuestion.Name = "gbQuestion";
-            this.gbQuestion.Size = new System.Drawing.Size(516, 168);
+            this.gbQuestion.Size = new System.Drawing.Size(763, 344);
             this.gbQuestion.TabIndex = 1;
             this.gbQuestion.TabStop = false;
             this.gbQuestion.Text = "GỢI Ý";
             // 
+            // llblQ12
+            // 
+            this.llblQ12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQ12.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ12.Location = new System.Drawing.Point(426, 264);
+            this.llblQ12.Name = "llblQ12";
+            this.llblQ12.Size = new System.Drawing.Size(276, 34);
+            this.llblQ12.TabIndex = 13;
+            this.llblQ12.TabStop = true;
+            this.llblQ12.Text = "12. Tên các trường có chuyên ngành có chỉ tiêu không it hơn 100 chỉ tiêu ?";
+            this.llblQ12.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ12_LinkClicked);
+            // 
+            // llblQ10
+            // 
+            this.llblQ10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQ10.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ10.Location = new System.Drawing.Point(426, 150);
+            this.llblQ10.Name = "llblQ10";
+            this.llblQ10.Size = new System.Drawing.Size(276, 40);
+            this.llblQ10.TabIndex = 12;
+            this.llblQ10.TabStop = true;
+            this.llblQ10.Text = "10. Các cơ sở đào tạo CNTT tại Thành phố Hồ Chí Minh ?";
+            this.llblQ10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ10_LinkClicked);
+            // 
+            // llblQ11
+            // 
+            this.llblQ11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQ11.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ11.Location = new System.Drawing.Point(426, 212);
+            this.llblQ11.Name = "llblQ11";
+            this.llblQ11.Size = new System.Drawing.Size(276, 34);
+            this.llblQ11.TabIndex = 11;
+            this.llblQ11.TabStop = true;
+            this.llblQ11.Text = "11. Điểm chuẩn theo từng chuyên ngành tại các trường ?";
+            this.llblQ11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ11_LinkClicked);
+            // 
+            // llblQ9
+            // 
+            this.llblQ9.AutoSize = true;
+            this.llblQ9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQ9.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ9.Location = new System.Drawing.Point(426, 110);
+            this.llblQ9.Name = "llblQ9";
+            this.llblQ9.Size = new System.Drawing.Size(319, 15);
+            this.llblQ9.TabIndex = 10;
+            this.llblQ9.TabStop = true;
+            this.llblQ9.Text = "9. Số lượng cơ sở đào tạo theo đơn vị chủ quản ?";
+            this.llblQ9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ9_LinkClicked);
+            // 
+            // llblQ6
+            // 
+            this.llblQ6.AutoSize = true;
+            this.llblQ6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQ6.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ6.Location = new System.Drawing.Point(64, 264);
+            this.llblQ6.Name = "llblQ6";
+            this.llblQ6.Size = new System.Drawing.Size(256, 15);
+            this.llblQ6.TabIndex = 9;
+            this.llblQ6.TabStop = true;
+            this.llblQ6.Text = "6. Các cơ sở đào tạo CNTT tại Hà Nội ?";
+            this.llblQ6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ6_LinkClicked);
+            // 
+            // llblQ8
+            // 
+            this.llblQ8.AutoSize = true;
+            this.llblQ8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblQ8.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ8.Location = new System.Drawing.Point(426, 70);
+            this.llblQ8.Name = "llblQ8";
+            this.llblQ8.Size = new System.Drawing.Size(276, 15);
+            this.llblQ8.TabIndex = 8;
+            this.llblQ8.TabStop = true;
+            this.llblQ8.Text = "8. Số lượng cơ sở đào tạo các tỉnh thành ?";
+            this.llblQ8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ8_LinkClicked);
+            // 
             // llblQ7
             // 
             this.llblQ7.AutoSize = true;
+            this.llblQ7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblQ7.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ7.Location = new System.Drawing.Point(299, 95);
+            this.llblQ7.Location = new System.Drawing.Point(426, 33);
             this.llblQ7.Name = "llblQ7";
-            this.llblQ7.Size = new System.Drawing.Size(186, 13);
+            this.llblQ7.Size = new System.Drawing.Size(263, 15);
             this.llblQ7.TabIndex = 6;
             this.llblQ7.TabStop = true;
-            this.llblQ7.Text = "Chỉ tiêu tuyển sinh tất cả các trường ?";
+            this.llblQ7.Text = "7. Chỉ tiêu tuyển sinh tất cả các trường ?";
             this.llblQ7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ7_LinkClicked);
             // 
             // llblQ5
             // 
             this.llblQ5.AutoSize = true;
+            this.llblQ5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblQ5.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ5.Location = new System.Drawing.Point(299, 29);
+            this.llblQ5.Location = new System.Drawing.Point(64, 212);
             this.llblQ5.Name = "llblQ5";
-            this.llblQ5.Size = new System.Drawing.Size(170, 13);
+            this.llblQ5.Size = new System.Drawing.Size(234, 15);
             this.llblQ5.TabIndex = 5;
             this.llblQ5.TabStop = true;
-            this.llblQ5.Text = "Danh sách các đơn vị chủ quản ?";
+            this.llblQ5.Text = "5. Danh sách các đơn vị chủ quản ?";
             this.llblQ5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ5_LinkClicked);
             // 
             // llblQ4
             // 
-            this.llblQ4.AutoSize = true;
+            this.llblQ4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblQ4.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ4.Location = new System.Drawing.Point(27, 129);
+            this.llblQ4.Location = new System.Drawing.Point(64, 150);
             this.llblQ4.Name = "llblQ4";
-            this.llblQ4.Size = new System.Drawing.Size(364, 13);
+            this.llblQ4.Size = new System.Drawing.Size(256, 40);
             this.llblQ4.TabIndex = 3;
             this.llblQ4.TabStop = true;
-            this.llblQ4.Text = "Danh mục giáo dục, đào tạo cấp IV trình độ đại học chuyên ngành CNTT?";
+            this.llblQ4.Text = "4. Danh mục giáo dục, đào tạo cấp IV trình độ đại học chuyên ngành CNTT?";
             this.llblQ4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ4_LinkClicked);
             // 
             // llblQ3
             // 
             this.llblQ3.AutoSize = true;
+            this.llblQ3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblQ3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ3.Location = new System.Drawing.Point(27, 95);
+            this.llblQ3.Location = new System.Drawing.Point(64, 110);
             this.llblQ3.Name = "llblQ3";
-            this.llblQ3.Size = new System.Drawing.Size(181, 13);
+            this.llblQ3.Size = new System.Drawing.Size(248, 15);
             this.llblQ3.TabIndex = 2;
             this.llblQ3.TabStop = true;
-            this.llblQ3.Text = "Website các trường đào tạo CNTT ?";
+            this.llblQ3.Text = "3. Website các trường đào tạo CNTT ?";
             this.llblQ3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ3_LinkClicked);
             // 
             // llblQ1
             // 
             this.llblQ1.AutoSize = true;
+            this.llblQ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblQ1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ1.Location = new System.Drawing.Point(27, 29);
+            this.llblQ1.Location = new System.Drawing.Point(64, 33);
             this.llblQ1.Name = "llblQ1";
-            this.llblQ1.Size = new System.Drawing.Size(140, 13);
+            this.llblQ1.Size = new System.Drawing.Size(195, 15);
             this.llblQ1.TabIndex = 1;
             this.llblQ1.TabStop = true;
-            this.llblQ1.Text = "Các trường đào tạo CNTT ?";
+            this.llblQ1.Text = "1. Các trường đào tạo CNTT ?";
             this.llblQ1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ1_LinkClicked);
             // 
             // rbtnS1
             // 
             this.rbtnS1.AutoSize = true;
-            this.rbtnS1.Location = new System.Drawing.Point(39, 12);
+            this.rbtnS1.Location = new System.Drawing.Point(51, 14);
             this.rbtnS1.Name = "rbtnS1";
-            this.rbtnS1.Size = new System.Drawing.Size(96, 17);
+            this.rbtnS1.Size = new System.Drawing.Size(114, 19);
             this.rbtnS1.TabIndex = 2;
             this.rbtnS1.TabStop = true;
             this.rbtnS1.Text = "MẪU CÂU HỎI";
@@ -159,9 +250,9 @@
             // rbtnS2
             // 
             this.rbtnS2.AutoSize = true;
-            this.rbtnS2.Location = new System.Drawing.Point(39, 231);
+            this.rbtnS2.Location = new System.Drawing.Point(70, 411);
             this.rbtnS2.Name = "rbtnS2";
-            this.rbtnS2.Size = new System.Drawing.Size(73, 17);
+            this.rbtnS2.Size = new System.Drawing.Size(87, 19);
             this.rbtnS2.TabIndex = 3;
             this.rbtnS2.TabStop = true;
             this.rbtnS2.Text = "TÌM KIẾM";
@@ -170,17 +261,17 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(150, 17);
+            this.searchTextBox.Location = new System.Drawing.Point(257, 21);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(254, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(338, 21);
             this.searchTextBox.TabIndex = 5;
             this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(422, 17);
+            this.btnSearch.Location = new System.Drawing.Point(619, 21);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(99, 27);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "TÌM";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -192,28 +283,27 @@
             this.pnlAdvance.Controls.Add(this.label2);
             this.pnlAdvance.Controls.Add(this.cbbTinhThanh);
             this.pnlAdvance.Controls.Add(this.label1);
-            this.pnlAdvance.Location = new System.Drawing.Point(27, 75);
+            this.pnlAdvance.Location = new System.Drawing.Point(69, 87);
             this.pnlAdvance.Name = "pnlAdvance";
-            this.pnlAdvance.Size = new System.Drawing.Size(448, 137);
+            this.pnlAdvance.Size = new System.Drawing.Size(598, 158);
             this.pnlAdvance.TabIndex = 7;
             this.pnlAdvance.Visible = false;
-            this.pnlAdvance.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAdvance_Paint);
             // 
             // cbbDVChuQuan
             // 
             this.cbbDVChuQuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDVChuQuan.FormattingEnabled = true;
-            this.cbbDVChuQuan.Location = new System.Drawing.Point(123, 66);
+            this.cbbDVChuQuan.Location = new System.Drawing.Point(163, 76);
             this.cbbDVChuQuan.Name = "cbbDVChuQuan";
-            this.cbbDVChuQuan.Size = new System.Drawing.Size(138, 21);
+            this.cbbDVChuQuan.Size = new System.Drawing.Size(182, 23);
             this.cbbDVChuQuan.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 69);
+            this.label2.Location = new System.Drawing.Point(25, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.Size = new System.Drawing.Size(118, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Đơn vị chủ quản :";
             // 
@@ -221,26 +311,25 @@
             // 
             this.cbbTinhThanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTinhThanh.FormattingEnabled = true;
-            this.cbbTinhThanh.Location = new System.Drawing.Point(123, 25);
+            this.cbbTinhThanh.Location = new System.Drawing.Point(163, 29);
             this.cbbTinhThanh.Name = "cbbTinhThanh";
-            this.cbbTinhThanh.Size = new System.Drawing.Size(138, 21);
+            this.cbbTinhThanh.Size = new System.Drawing.Size(182, 23);
             this.cbbTinhThanh.TabIndex = 1;
-            this.cbbTinhThanh.SelectedIndexChanged += new System.EventHandler(this.cbbTinhThanh_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 28);
+            this.label1.Location = new System.Drawing.Point(27, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(87, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tỉnh Thành :";
             // 
             // btnAdvanced
             // 
-            this.btnAdvanced.Location = new System.Drawing.Point(27, 45);
+            this.btnAdvanced.Location = new System.Drawing.Point(97, 54);
             this.btnAdvanced.Name = "btnAdvanced";
-            this.btnAdvanced.Size = new System.Drawing.Size(75, 23);
+            this.btnAdvanced.Size = new System.Drawing.Size(99, 27);
             this.btnAdvanced.TabIndex = 8;
             this.btnAdvanced.Text = "NÂNG CAO";
             this.btnAdvanced.UseVisualStyleBackColor = true;
@@ -257,9 +346,9 @@
             this.gbSearch.Controls.Add(this.btnSearch);
             this.gbSearch.Controls.Add(this.pnlAdvance);
             this.gbSearch.Enabled = false;
-            this.gbSearch.Location = new System.Drawing.Point(52, 254);
+            this.gbSearch.Location = new System.Drawing.Point(70, 454);
             this.gbSearch.Name = "gbSearch";
-            this.gbSearch.Size = new System.Drawing.Size(516, 78);
+            this.gbSearch.Size = new System.Drawing.Size(763, 87);
             this.gbSearch.TabIndex = 9;
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "TIÊU CHÍ";
@@ -276,31 +365,21 @@
             "Tên ngành đào tạo",
             "Mã trường",
             "Mã ngành đào tạo"});
-            this.cbbTieuChi.Location = new System.Drawing.Point(7, 17);
+            this.cbbTieuChi.Location = new System.Drawing.Point(66, 21);
             this.cbbTieuChi.Name = "cbbTieuChi";
-            this.cbbTieuChi.Size = new System.Drawing.Size(131, 21);
+            this.cbbTieuChi.Size = new System.Drawing.Size(173, 23);
             this.cbbTieuChi.TabIndex = 9;
-            // 
-            // llblQ8
-            // 
-            this.llblQ8.AutoSize = true;
-            this.llblQ8.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ8.Location = new System.Drawing.Point(299, 61);
-            this.llblQ8.Name = "llblQ8";
-            this.llblQ8.Size = new System.Drawing.Size(198, 13);
-            this.llblQ8.TabIndex = 8;
-            this.llblQ8.TabStop = true;
-            this.llblQ8.Text = "Số lượng cơ sở đào tạo các tỉnh thành ?";
             // 
             // ASK_FORM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 336);
+            this.ClientSize = new System.Drawing.Size(894, 553);
             this.Controls.Add(this.gbSearch);
             this.Controls.Add(this.rbtnS2);
             this.Controls.Add(this.rbtnS1);
             this.Controls.Add(this.gbQuestion);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -319,10 +398,22 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel llblQ2;
+        
         private System.Windows.Forms.GroupBox gbQuestion;
+
         private System.Windows.Forms.LinkLabel llblQ1;
+        private System.Windows.Forms.LinkLabel llblQ2;
         private System.Windows.Forms.LinkLabel llblQ3;
+        private System.Windows.Forms.LinkLabel llblQ4;
+        private System.Windows.Forms.LinkLabel llblQ5;
+        private System.Windows.Forms.LinkLabel llblQ6;
+        private System.Windows.Forms.LinkLabel llblQ7;
+        private System.Windows.Forms.LinkLabel llblQ8;
+        private System.Windows.Forms.LinkLabel llblQ9;
+        private System.Windows.Forms.LinkLabel llblQ10;
+        private System.Windows.Forms.LinkLabel llblQ11;
+        private System.Windows.Forms.LinkLabel llblQ12;
+
         private System.Windows.Forms.RadioButton rbtnS1;
         private System.Windows.Forms.RadioButton rbtnS2;
         private System.Windows.Forms.TextBox searchTextBox;
@@ -334,10 +425,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbDVChuQuan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel llblQ7;
-        private System.Windows.Forms.LinkLabel llblQ5;
-        private System.Windows.Forms.LinkLabel llblQ4;
+        
         private System.Windows.Forms.ComboBox cbbTieuChi;
-        private System.Windows.Forms.LinkLabel llblQ8;
+       
     }
 }

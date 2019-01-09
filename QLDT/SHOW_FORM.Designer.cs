@@ -41,14 +41,14 @@
             this.dataGridShowForm.Location = new System.Drawing.Point(-1, 0);
             this.dataGridShowForm.Name = "dataGridShowForm";
             this.dataGridShowForm.RowHeadersWidth = 4;
-            this.dataGridShowForm.Size = new System.Drawing.Size(1283, 582);
+            this.dataGridShowForm.Size = new System.Drawing.Size(1267, 551);
             this.dataGridShowForm.TabIndex = 0;
             // 
             // SHOW_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 580);
+            this.ClientSize = new System.Drawing.Size(1263, 550);
             this.Controls.Add(this.dataGridShowForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

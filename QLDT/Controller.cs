@@ -22,7 +22,7 @@ namespace QLDT
             else
             {
                 SHOW_FORM sf = new SHOW_FORM(dt);
-                sf.Show();
+                sf.ShowDialog();
             }
         }
         private DataTable getDataTable(String query)
@@ -34,6 +34,7 @@ namespace QLDT
             dt.Columns["STT"].AutoIncrement = true;
             dt.Columns["STT"].AutoIncrementSeed = 1;
             dt.Columns["STT"].AutoIncrementStep = 1;
+            
             SDA.Fill(dt);
             return dt;
         }

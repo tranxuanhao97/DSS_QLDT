@@ -21,10 +21,10 @@ namespace QLDT
         private void ShowResult(DataTable dt)
         {
             dataGridShowForm.DataSource = dt;
-
             dataGridShowForm.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
             dataGridShowForm.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridShowForm.ColumnHeadersDefaultCellStyle.Font = new Font("SansSerif", 10F, FontStyle.Bold);
+            dataGridShowForm.Columns[0].Width = 50;
             dataGridShowForm.EnableHeadersVisualStyles = false;
         }
     }

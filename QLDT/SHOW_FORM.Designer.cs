@@ -40,6 +40,7 @@
             this.dataGridShowForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridShowForm.Location = new System.Drawing.Point(-1, 0);
             this.dataGridShowForm.Name = "dataGridShowForm";
+            this.dataGridShowForm.RowHeadersWidth = 4;
             this.dataGridShowForm.Size = new System.Drawing.Size(1283, 582);
             this.dataGridShowForm.TabIndex = 0;
             // 

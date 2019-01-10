@@ -50,3 +50,4 @@ D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.SHOW_FORM.resources
 D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.Properties.Resources.resources
 D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.STATISTIC_FORM.resources
 D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.csproj.GenerateResource.Cache
+D:\WINFORM_TUAN\DSS_QLDT-master\QLDT\obj\Debug\QLDT.About_Form.resources

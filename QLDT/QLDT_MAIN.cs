@@ -23,7 +23,7 @@ namespace QLDT
         }
         private void btnHien_Click(object sender, EventArgs e)
         {
-            query = "Select MaTruong as 'MÃ TRƯỜNG',TenTruong as 'TÊN TRƯỜNG', Website as 'WEBSITE', DiaChi as 'ĐỊA CHỈ', DVChuquan as 'ĐƠN VỊ CHỦ QUẢN' From [QLDT_V1].[dbo].[cosodaotao]";
+            query = "Select MaTruong as 'MÃ TRƯỜNG',TenTruong as 'TÊN TRƯỜNG', Website as 'WEBSITE', DiaChi as 'ĐỊA CHỈ', DVChuquan as 'ĐƠN VỊ CHỦ QUẢN' From [QLDT].[dbo].[cosodaotao]";
             controller.PushDataToShowForm(query);
         }
 
@@ -50,7 +50,7 @@ namespace QLDT
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-
+            new About_Form().ShowDialog();
         }
 
         private void btnShow_MouseHover(object sender, EventArgs e)

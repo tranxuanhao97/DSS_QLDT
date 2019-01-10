@@ -74,6 +74,13 @@ namespace QLDT.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Hus_Banner {
+            get {
+                object obj = ResourceManager.GetObject("Hus-Banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap show {
             get {
                 object obj = ResourceManager.GetObject("show", resourceCulture);

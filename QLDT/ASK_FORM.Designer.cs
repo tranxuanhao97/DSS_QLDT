@@ -261,7 +261,7 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(257, 21);
+            this.searchTextBox.Location = new System.Drawing.Point(256, 20);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(338, 21);
             this.searchTextBox.TabIndex = 5;
@@ -269,7 +269,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(619, 21);
+            this.btnSearch.Location = new System.Drawing.Point(613, 17);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(99, 27);
             this.btnSearch.TabIndex = 6;
@@ -303,9 +303,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 15);
+            this.label2.Size = new System.Drawing.Size(136, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Đơn vị chủ quản :";
+            this.label2.Text = "ĐƠN VỊ CHỦ QUẢN :";
             // 
             // cbbTinhThanh
             // 
@@ -321,19 +321,21 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 15);
+            this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tỉnh Thành :";
+            this.label1.Text = "TỈNH THÀNH :";
             // 
             // btnAdvanced
             // 
-            this.btnAdvanced.Location = new System.Drawing.Point(97, 54);
+            this.btnAdvanced.Location = new System.Drawing.Point(83, 54);
             this.btnAdvanced.Name = "btnAdvanced";
-            this.btnAdvanced.Size = new System.Drawing.Size(99, 27);
+            this.btnAdvanced.Size = new System.Drawing.Size(147, 27);
             this.btnAdvanced.TabIndex = 8;
             this.btnAdvanced.Text = "NÂNG CAO";
             this.btnAdvanced.UseVisualStyleBackColor = true;
+            this.btnAdvanced.MouseLeave += new System.EventHandler(this.btnAdvanced_MouseLeave);
             this.btnAdvanced.Click += new System.EventHandler(this.btnAdvanced_Click);
+            this.btnAdvanced.MouseHover += new System.EventHandler(this.btnAdvanced_MouseHover);
             // 
             // gbSearch
             // 
@@ -361,11 +363,11 @@
             this.cbbTieuChi.FormattingEnabled = true;
             this.cbbTieuChi.IntegralHeight = false;
             this.cbbTieuChi.Items.AddRange(new object[] {
-            "Tên trường",
-            "Tên ngành đào tạo",
-            "Mã trường",
-            "Mã ngành đào tạo"});
-            this.cbbTieuChi.Location = new System.Drawing.Point(66, 21);
+            "TÊN TRƯỜNG",
+            "TÊN NGÀNH ĐÀO TẠO",
+            "MÃ TRƯỜNG",
+            "MÃ NGÀNH ĐÀO TẠO"});
+            this.cbbTieuChi.Location = new System.Drawing.Point(67, 20);
             this.cbbTieuChi.Name = "cbbTieuChi";
             this.cbbTieuChi.Size = new System.Drawing.Size(173, 23);
             this.cbbTieuChi.TabIndex = 9;
@@ -381,10 +383,11 @@
             this.Controls.Add(this.gbQuestion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(0, -25);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ASK_FORM";
-            this.Text = "ASK_FORM";
+            this.Text = "TRUY VẤN";
             this.gbQuestion.ResumeLayout(false);
             this.gbQuestion.PerformLayout();
             this.pnlAdvance.ResumeLayout(false);

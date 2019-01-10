@@ -70,7 +70,7 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridStatisticForm);
             this.Name = "STATISTIC_FORM";
-            this.Text = "STATISTIC_FORM";
+            this.Text = "KẾT QUẢ";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStatisticForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);

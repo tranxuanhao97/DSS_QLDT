@@ -15,6 +15,14 @@ namespace QLDT
         {
             DataTable dt = getDataTable(query);
 
+            //var dt2 = dt.Clone();
+            //var x = dt.Rows.Count;
+
+            //for (var i = 0; i <= x / 10; i++)
+            //{
+            //    dt2.Rows.Add(dt.Rows[i].ItemArray);
+            //}
+
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu thỏa mãn");
@@ -28,6 +36,7 @@ namespace QLDT
         private DataTable getDataTable(String query)
         {
             DataTable dt = new DataTable();
+            
             SqlDataAdapter SDA = new SqlDataAdapter(query, conn);
             //DialogResult result = MessageBox.Show(query, "Print");
             dt.Columns.AddRange(new DataColumn[1] { new DataColumn("STT") });
@@ -35,6 +44,7 @@ namespace QLDT
             dt.Columns["STT"].AutoIncrementSeed = 1;
             dt.Columns["STT"].AutoIncrementStep = 1;
             SDA.Fill(dt);
+            
             return dt;
         }
     }

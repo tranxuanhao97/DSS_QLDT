@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridShowForm = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridShowForm)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,14 @@
             this.dataGridShowForm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridShowForm.Location = new System.Drawing.Point(-1, 0);
             this.dataGridShowForm.Name = "dataGridShowForm";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridShowForm.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridShowForm.RowHeadersWidth = 4;
             this.dataGridShowForm.Size = new System.Drawing.Size(1267, 551);
             this.dataGridShowForm.TabIndex = 0;
@@ -55,7 +64,7 @@
             this.Controls.Add(this.dataGridShowForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SHOW_FORM";
-            this.Text = "SHOW_FORM";
+            this.Text = "KẾT QUẢ";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridShowForm)).EndInit();
             this.ResumeLayout(false);
 
